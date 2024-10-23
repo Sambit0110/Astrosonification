@@ -1,4 +1,4 @@
-# Imagesonification
+# Image_sonification
 ## Abstract
 This project involves working with a galaxy image dataset stored in a .npy file. The goal is to read the dataset, process the images using Python libraries like OpenCV and NumPy, extract pixel information (RGB/BGR), and visualize the images.
 ## Project Description

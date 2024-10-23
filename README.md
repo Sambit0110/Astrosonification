@@ -8,6 +8,7 @@ This repository contains scripts to:
 3.Display the images using OpenCV and matplotlib.
 4.Store the pixel data in a CSV file for further analysis.
 5.Visualize the pixel data via heatmaps and other visualization techniques.
+## Project Structure
 - data/: Contains the .npy file of the galaxy images.
 - .ipynb: Jupyter notebooks for analysis and visualization.
 - output/: Stores the extracted pixel data (CSV) and visual outputs.

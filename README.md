@@ -8,7 +8,35 @@ This repository contains scripts to:
 - Display the images using OpenCV and matplotlib.
 - Store the pixel data in a CSV file for further analysis.
 - Visualize the pixel data via heatmaps and other visualization techniques.
+- Explores the creative process of mapping pixel data to audio parameters, resulting in the sonification of visual data.
+## Maping Function Description
+### 1. RGB to Frequency Ranges 
+- **RGB to Frequency**: Each color channel (R, G, B) is mapped to a specific frequency range. 
+- **Red**: 30-500 Hz with an offset of 60 Hz. 
+- **Green**: 500-2000 Hz with an offset of 250 Hz. 
+- **Blue**: 2000-10000 Hz with an offset of 1000 Hz. 
+- **Amplitude**: Volume is proportional to the RGB value (0-255). 
+- **Combined Sine Waves**: Sine waves for R, G, and B channels are combined for each pixel.
+### 2. HSV to Sound Mapping 
+- **Hue to Frequency**: Maps the hue component of the pixel's HSV value to a frequency (220-880 Hz). 
+- **Saturation to Amplitude**: Maps the saturation component to amplitude (0-1). 
+- **Value to Panning**: Maps the brightness component to stereo panning (-1.0 to 1.0).
+### 3. Brightness and Dominant Color to Sound 
+- **Brightness to Frequency**: The pixel's brightness (0-255) is mapped to a frequency (220-880 Hz). 
+- **Dominant Color to Waveform**: The dominant color determines the waveform: sine for red, square for green, and sawtooth for blue.
+## Implementation 
+- **Libraries Used**: pandas, numpy, pydub, colorsys, and torch.
+- **Audio Generation**: Uses sine, square, and sawtooth waves to generate tones with the mapped parameters. 
+- **Batch Processing**: Processes the **first 1000 rows** of pixel data to generate a short audio file. 
 ## Project Structure
 - data/: Contains the .npy file of the galaxy images.
-- .ipynb: Jupyter notebooks for analysis and visualization.
+- .ipynb: Jupyter notebook for analysis and visualization.
 - output/: Stores the extracted pixel data (CSV) and visual outputs.
+- Image_Sonification/: Jupyter notebooks for differenet sound mapping function and sound generation.
+- Generated_Sound_files/: Sample sound files demonstrating the corressponding mapping.
+## Instructions 
+### Prerequisites 
+- Python 3.x
+- Install required libraries: ```sh
+                              pip install pandas numpy pydub colorsys torch
+                              ```

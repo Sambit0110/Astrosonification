@@ -24,6 +24,10 @@ This repository contains scripts to:
 ### 3. Brightness and Dominant Color to Sound 
 - **Brightness to Frequency**: The pixel's brightness (0-255) is mapped to a frequency (220-880 Hz). 
 - **Dominant Color to Waveform**: The dominant color determines the waveform: sine for red, square for green, and sawtooth for blue.
+### Color-Based Sound Effects Sonification
+- Average color values (Red, Green, Blue) are calculated for each row of pixels.
+- Sine waves are generated for each color channel: - **Red**: 440 Hz - **Green**: 660 Hz - **Blue**: 880 Hz
+- The sine waves are combined to create a single wave for each row of pixels.
 ## Implementation 
 - **Libraries Used**: pandas, numpy, pydub, colorsys, and torch.
 - **Audio Generation**: Uses sine, square, and sawtooth waves to generate tones with the mapped parameters. 
@@ -32,7 +36,6 @@ This repository contains scripts to:
 ### Overview
 - This tool allows users to upload an image and select a sonification mode.
 - It converts image data into sound using different mappings, enhancing accessibility and providing a unique way to interpret visual data.
-
 ### Features
 - Pixel extraction from images
 - Multiple sonification modes:
@@ -43,14 +46,15 @@ This repository contains scripts to:
 ### Setup Instructions
 1. **Clone the repository:**
    ```sh
-   git clone <repository-link>
-   cd <repository-folder>
+   git clone <[repository-link](https://github.com/Sambit0110/Astrosonification.git)>
+   cd <Image_Sonification_tool>
 ## Project Structure
 - data/: Contains the .npy file of the galaxy images.
 - .ipynb: Jupyter notebook for analysis and visualization.
 - output/: Stores the extracted pixel data (CSV) and visual outputs.
 - Image_Sonification/: Jupyter notebooks for differenet sound mapping function and sound generation.
 - Generated_Sound_files/: Sample sound files demonstrating the corressponding mapping.
+- Image Sonification Tool/: tool allows users to upload an image and select a sonification mode.
 ## Instructions 
 ### Prerequisites 
 - Python 3.x

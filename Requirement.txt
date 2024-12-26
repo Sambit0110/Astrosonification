@@ -1,0 +1,10 @@
+numpy
+pandas
+pydub
+torch
+colorsys
+opencv-python
+matplotlib
+soundfile
+simpleaudio
+pip install -r requirements.txt

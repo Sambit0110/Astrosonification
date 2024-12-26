@@ -59,5 +59,5 @@ This repository contains scripts to:
 ### Prerequisites 
 - Python 3.x
 - Install required libraries: ```sh
-                              pip install pandas numpy pydub colorsys torch
+                              pip install -r requirements.txt
                               ```

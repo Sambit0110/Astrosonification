@@ -6,6 +6,6 @@ colorsys
 opencv-python
 matplotlib
 soundfile
-simpleaudio
+
 
 

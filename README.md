@@ -27,7 +27,24 @@ This repository contains scripts to:
 ## Implementation 
 - **Libraries Used**: pandas, numpy, pydub, colorsys, and torch.
 - **Audio Generation**: Uses sine, square, and sawtooth waves to generate tones with the mapped parameters. 
-- **Batch Processing**: Processes the **first 1000 rows** of pixel data to generate a short audio file. 
+- **Batch Processing**: Processes the **first 1000 rows** of pixel data to generate a short audio file.
+## Image Sonification Tool
+### Overview
+- This tool allows users to upload an image and select a sonification mode.
+- It converts image data into sound using different mappings, enhancing accessibility and providing a unique way to interpret visual data.
+
+### Features
+- Pixel extraction from images
+- Multiple sonification modes:
+  - Color-Based Sound Effects
+  - Pitch Mapping Based on Brightness
+  - Frequency Mapping
+  - HSV Mapping
+### Setup Instructions
+1. **Clone the repository:**
+   ```sh
+   git clone <repository-link>
+   cd <repository-folder>
 ## Project Structure
 - data/: Contains the .npy file of the galaxy images.
 - .ipynb: Jupyter notebook for analysis and visualization.
